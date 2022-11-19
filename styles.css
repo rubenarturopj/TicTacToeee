@@ -1,0 +1,75 @@
+:root {
+    /* vamos a declarar una variable */
+    --purple: #3e0249;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--purple);
+    font-family: sans-serif;
+}
+
+* {
+    /* esto hace que el margen y el padding estên comprendidos en el ancho y la altura
+    si se modifica la altura o la anchura, ya van incluidos el margen y padding */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 40px;
+    /* vh means viewport height. 100 vh takes the entire height of the screen */
+    height: 100vh;
+    /* para que se peguen, el boton se va a poner en la misma linea que el h1 */
+    display: flex;
+    /* jalamos todo pal centro */
+    justify-content: center;
+    /* y los alineamos */
+    align-items: center;
+    /* los ponemos uno encima del otro, como columna */
+    flex-direction: column;
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--purple);
+    font-size: 150px;
+    
+}
+
+button {
+    padding: 10px 20px;
+    /* para hacer los bordes mas redondos */
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+    font-size: 18px;
+    /* esta propiedad es la que nos permite animar el boton al poenr el cursor encima
+    se pone el tiempo que tarda en transformarse y luego la vriable transform que estâ
+    definida mâs abajo, aquî sôlo la estamos llamando */
+    transition: 200ms transform;
+}
+/* Cuando el cursor se pone encima del botôn */
+button:hover {
+    /* para cambiar el cursor (flecha) por una manita */
+    cursor: pointer;
+    /* esta transformaciôn da el efecto de que se alza al poner el cursor encima */
+    transform: translateY(-3px);
+}
