@@ -108,7 +108,7 @@ const playerHasWon = () => {
         }
 
         if (spaces[4] === currentPlayer && spaces[8] === currentPlayer) {
-            console.log(`${currentPlayer} wins diagonally.`);
+            console.log(`${currentPlayer} wins diagonally \\ .`);
             return true;
         }
 
@@ -141,6 +141,11 @@ const playerHasWon = () => {
 
         if (spaces[3] === currentPlayer && spaces[5] === currentPlayer) {
             console.log(`${currentPlayer} wins horizontally in the middle.`);
+            return true;
+        }
+
+        if (spaces[2] === currentPlayer && spaces[6] === currentPlayer) {
+            console.log(`${currentPlayer} wins diagonally / .`);
             return true;
         }
     }
